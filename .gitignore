@@ -1,0 +1,30 @@
+# virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# secrets
+.env
+
+# placeholder for data
+placeholder/placeholder.json
+
+# generated alias CSVs
+csv_alias/*
+!csv_alias/.gitkeep
+
+# raw Pixabay downloads
+raw/*
+!raw/.gitkeep
+
+# generated reports
+missing_images.csv
+
+# temporary files
+temp/
