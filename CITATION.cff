@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you find this dataset useful, please cite our paper."
+title: "FENCE: A Financial and Multimodal Jailbreak Detection Dataset"
+authors:
+  - family-names: Kim
+    given-names: Mirae
+  - family-names: Jeong
+    given-names: Seonghun
+  - family-names: Kwak
+    given-names: Youngjun
+year: 2026
+doi: 10.63317/4a35sc6sgwwv
+url: "https://lrec.elra.info/lrec2026-main-712"
+license: CC-BY-NC-4.0
+preferred-citation:
+  type: conference-paper
+  title: "FENCE: A Financial and Multimodal Jailbreak Detection Dataset"
+  authors:
+    - family-names: Kim
+      given-names: Mirae
+    - family-names: Jeong
+      given-names: Seonghun
+    - family-names: Kwak
+      given-names: Youngjun
+  collection-title: "Proceedings of the Fifteenth Language Resources and Evaluation Conference (LREC 2026)"
+  year: 2026
+  doi: 10.63317/4a35sc6sgwwv
+  url: "https://lrec.elra.info/lrec2026-main-712"

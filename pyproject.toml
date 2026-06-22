@@ -10,3 +10,38 @@ dependencies = [
     "python-dotenv>=1.2.2",
     "requests>=2.32.5",
 ]
+
+[dependency-groups]
+dev = [
+    "poethepoet>=0.30",
+]
+
+# Task runner (replaces the old Makefile).
+# Run with:  uv run poe <task>   e.g.  uv run poe all
+[tool.poe.tasks.download-images]
+help = "Download Pixabay images to raw/"
+cmd = "python scripts/download_pixabay_images.py"
+
+[tool.poe.tasks.list-missing]
+help = "Export missing images to missing_images.csv"
+cmd = "python scripts/download_pixabay_images.py --list-missing"
+
+[tool.poe.tasks.replace-placeholder]
+help = "Replace anonymized placeholders in CSVs"
+cmd = "python scripts/replace_placeholder.py"
+
+[tool.poe.tasks.generate-dataset]
+help = "Generate all image types to imgs/"
+cmd = "python scripts/generate_dataset.py"
+
+[tool.poe.tasks.clean-alias]
+help = "Remove csv_alias/"
+cmd = "rm -rf csv_alias"
+
+[tool.poe.tasks.all]
+help = "Full pipeline (download + replace-placeholder + generate)"
+sequence = ["download-images", "replace-placeholder", "generate-dataset"]
+
+[tool.poe.tasks.dataset]
+help = "Quick pipeline (download + generate, no placeholder)"
+sequence = ["download-images", "generate-dataset"]
